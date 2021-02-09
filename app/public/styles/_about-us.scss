@@ -1,0 +1,40 @@
+.template-about {
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    &--left {
+      padding: 3rem 4rem 3rem 10rem;
+
+      h2 {
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 3rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          height: .3rem;
+          background-color: $secondaryColor;
+          width: 24rem;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      &--content {
+        font-size: 1.8rem;
+      }
+    }
+
+    img {
+
+    }
+  }
+
+  &__bottom {
+
+  }
+}
