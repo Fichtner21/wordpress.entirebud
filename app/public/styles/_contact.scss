@@ -1,0 +1,215 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: auto;
+
+  @media screen and (max-width: 1024px){    
+    display: block;
+  }  
+
+  .desaturate {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .desaturate:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;    
+    filter: grayscale(100%) brightness(0.2);    
+  }
+
+  
+
+  &__left {
+    background-image: url('../images/hammerpin.jpg');    
+    padding: 5rem 1rem 1rem 10rem;
+
+    @media screen and (max-width: 1024px){
+      padding: 2rem 1.5rem;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 4.8rem;
+      position: relative;
+      margin-bottom: 5rem;
+
+      &:after {
+        @include long-line;
+      }
+    }
+
+    .what__contact--list {
+      display: flex;        
+      flex-direction: column;
+      justify-content: center;      
+      color: #fff;      
+      height: fit-content;      
+      position: relative;  
+
+      .what__contact--list-cont { 
+        z-index: 2;                
+
+        .what__contact--item {
+          font-size: 2.1rem;
+          margin-bottom: 3rem;
+          h4 {
+            font-weight: 400;
+          }
+
+          div {
+            font-weight: 700;
+            max-width: 22rem;
+          }
+        }
+      }
+
+      &--item {
+        font-size: 2.1rem;
+        margin-bottom: 3rem;
+        h4 {
+          font-weight: 400;
+        }
+
+        div {
+          font-weight: 700;
+          max-width: 22rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    .what__contact {  
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      height: 100%;
+      padding: 10rem 0;
+
+      @media screen and (max-width: 500px){
+        display: block;
+      }      
+
+      &--form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;        
+
+        h3 {
+          margin-bottom: 3rem;
+        }
+
+        .wpcf7 {
+          @media screen and (max-width: 500px){
+            width: 100%;
+          }
+      
+          form {
+            @media screen and (max-width: 500px){
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;
+              padding: 0 1rem;
+              margin: 0 1rem;
+            }
+            
+            @media screen and (max-width: 500px){
+              input, textarea {
+                width: 100%;
+              }
+            }           
+          }
+        }
+        
+        .custom-input {
+          margin-bottom: 2rem;
+          label {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 500px){
+              display: block;
+            }
+
+            .label-head {
+              width: 8rem;
+              text-align: right;
+              font-size: 1.8rem;
+              margin-right: .5rem;
+
+              &:last-of-type{
+                margin-right: 1.5rem;
+              }
+            }
+
+            .wpcf7-form-control-wrap {
+              margin-left: .5rem;
+              width: 100%;
+
+              input {
+                border: 1px solid #dbdbdb;
+                border-radius: .5rem;
+                height: 5.5rem;
+                font-size: 1.8rem;
+                padding: 0 .5rem;
+                box-sizing: border-box;
+                min-width: 100%;
+              }
+
+              textarea {
+                border: 1px solid #dbdbdb;
+                border-radius: .5rem;
+                height: 17rem;
+                font-size: 1.8rem;
+                padding: .5rem;                
+                resize: none;
+                box-sizing: border-box;
+                min-width: 100%;
+                font-family: 'Poppins', sans-serif;
+              }
+            }
+          }
+        }
+
+        .custom-submit {
+          display: flex;
+          justify-content: flex-end;
+
+          @media screen and (max-width: 500px){
+            flex-direction: column;
+          }
+
+          input {
+            background-color: $secondaryColor;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 2rem 5rem;
+            transition: all .4s;
+            order: 1;
+            appearance: none;
+            border: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: .5rem;
+
+            &:hover {
+              color: #000;
+              cursor: pointer;
+            }
+          }
+        }
+      }    
+    }
+  }
+}

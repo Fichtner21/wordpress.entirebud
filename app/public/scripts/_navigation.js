@@ -6,7 +6,8 @@
  */
 document.addEventListener("DOMContentLoaded", function () {
   (function () {
-    const siteNavigation = document.getElementById("site-navigation");   
+    const siteNavigation = document.getElementById("main-nav"); 
+    const phoneFb = document.getElementById('cta');  
 
     // Return early if the navigation don't exist.
     if (!siteNavigation) {
@@ -49,11 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.remove(activeClass);
         menu.classList.remove(activeClass);
         bodyOverlay.classList.remove(activeClass);
+        phoneFb.classList.remove(activeClass);
       } else {
         button.setAttribute("aria-expanded", "true");
         button.classList.add(activeClass);
         menu.classList.add(activeClass);
         bodyOverlay.classList.add(activeClass);
+        phoneFb.classList.add(activeClass);
       }
     });
 
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.remove(activeClass);
         menu.classList.remove(activeClass);
         bodyOverlay.classList.remove(activeClass);
+        phoneFb.classList.remove(activeClass);
       }
     });
 

@@ -1,0 +1,132 @@
+.single-realization {
+  article {
+    padding: 0 10rem;
+    margin: 5rem 0;
+
+    h4 {
+      font-size: 2.2rem;
+      color: #aaa;
+      
+    }
+
+    h2 {
+      font-size: 4.8rem;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 5rem;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: .3rem;
+        background-color: $secondaryColor;
+        width: 24rem;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .realization__item {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      grid-template-rows: auto;
+      gap: 0 2rem;
+      margin-bottom: 3rem;
+
+      &--desc {
+        &--title {
+          font-size: 2.2rem;
+          font-weight: 700;
+        }
+      }      
+    }
+
+    .post-navigation {
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          height: 2px;
+          background-color: #d9d9d9;
+          content: "";
+          width: 100%;
+          z-index: -1;
+        }
+
+        a {
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          text-decoration: none;
+        }
+
+        .nav-next {
+          z-index: 1;         
+
+          a {            
+            color: #000;
+            background-color: #fff;
+            padding-left: 1rem;
+          }
+        }
+
+        .nav-previous {
+          z-index: 1;         
+
+          a {            
+            color: #a3a3a3; 
+            background-color: #fff;  
+            padding-right: 1rem;         
+          }
+        }
+      }
+    }
+  }
+
+  .template-about__bottom {
+    &--baner {
+      height: 63rem;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .template-about__bottom-center {
+        background-color: #fff;
+        position: absolute;
+        text-transform: uppercase;       
+        text-align: center;
+        padding: .5rem 0;
+        font-weight: 700;
+
+        div {
+          font-size: 7.5rem; 
+          margin-bottom: 2rem;                   
+        }
+
+        a {
+          font-size: 1.8rem;
+          color: #fff;
+          background-color: $secondaryColor;
+          padding: 1.5rem 5rem;
+          transition: all .4s;
+          border-radius: .5rem; 
+          text-decoration: none;         
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

@@ -197,7 +197,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  */
 document.addEventListener("DOMContentLoaded", function () {
   (function () {
-    var siteNavigation = document.getElementById("site-navigation"); // Return early if the navigation don't exist.
+    var siteNavigation = document.getElementById("main-nav");
+    var phoneFb = document.getElementById('cta'); // Return early if the navigation don't exist.
 
     if (!siteNavigation) {
       return;
@@ -233,11 +234,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.remove(activeClass);
         menu.classList.remove(activeClass);
         bodyOverlay.classList.remove(activeClass);
+        phoneFb.classList.remove(activeClass);
       } else {
         button.setAttribute("aria-expanded", "true");
         button.classList.add(activeClass);
         menu.classList.add(activeClass);
         bodyOverlay.classList.add(activeClass);
+        phoneFb.classList.add(activeClass);
       }
     }); // Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 
@@ -250,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.remove(activeClass);
         menu.classList.remove(activeClass);
         bodyOverlay.classList.remove(activeClass);
+        phoneFb.classList.remove(activeClass);
       }
     }); // Get all the link elements within the menu.
 

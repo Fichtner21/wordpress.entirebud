@@ -102,3 +102,23 @@ b {
     text-align: right;
   }
 }
+
+@mixin short-line {  
+  content: '';
+  position: absolute;
+  height: .3rem;
+  background-color: $secondaryColor;
+  width: 9rem;
+  bottom: 0;
+  left: 0; 
+}
+
+@mixin long-line {  
+  content: '';
+  position: absolute;
+  height: .3rem;
+  background-color: $secondaryColor;
+  width: 24rem;
+  bottom: 0;
+  left: 0;
+}

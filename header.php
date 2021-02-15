@@ -35,23 +35,33 @@
 		 ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'entirebud' ); ?>
-				<span class='screen-reader-text'><?= __( 'Menu główne', 'sputnik-wp-theme' ); ?></span>
+		<div id="main-nav" class="main-nav">
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php //esc_html_e( 'Primary Menu', 'entirebud' ); ?>
+					<span class='screen-reader-text'><?= __( 'Menu główne', 'sputnik-wp-theme' ); ?></span>
 
-				<span class="menu-toggle__line"></span>
-				<span class="menu-toggle__line"></span>
-				<span class="menu-toggle__line"></span>
-			</button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'container' => false
-				)
-			);
-			?>
-			
-		</nav><!-- #site-navigation -->
+					<span class="menu-toggle__line"></span>
+					<span class="menu-toggle__line"></span>
+					<span class="menu-toggle__line"></span>
+				</button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'container' => false
+					)
+				);
+				?>
+
+			</nav><!-- #site-navigation -->
+			<div class="cta" id="cta">
+				<a class="fb" href="<?php echo get_field('fb_cta'); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/app/public/images/fb.png"/>
+				</a>
+				<a class="phone" href="tel:<?php echo get_field('phone_cta', 'option'); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/app/public/images/tel.png"/>
+				</a>
+			</div>
+		</div>
 	</header><!-- #masthead -->
