@@ -118,7 +118,7 @@ get_header();
               <div class="what-box">
                 <a href="<?php echo $permalink; ?>">
                   <?php echo $thumbnail; ?>
-                  <div class="what-box-title"><?php echo $title; ?></div>
+                  <div class="what-box-title"><span><?php echo $title; ?></span></div>
                 </a>
               </div>
               <?php

@@ -1077,9 +1077,15 @@ p {
   display: grid;
   grid-template-columns: 50rem 1fr;
   grid-template-rows: auto; }
+  @media screen and (max-width: 992px) {
+    .slider .slide-cont {
+      grid-template-columns: 1fr; } }
   .slider .slide-cont .slide-left {
     background-color: #131313;
     padding: 20rem 10rem 20rem 10rem; }
+    @media screen and (max-width: 992px) {
+      .slider .slide-cont .slide-left {
+        padding: 10rem 1.5rem; } }
     .slider .slide-cont .slide-left .slide-title {
       color: #fff;
       font-weight: 700;
@@ -1108,6 +1114,9 @@ p {
   bottom: 5rem;
   left: 10rem;
   z-index: 10; }
+  @media screen and (max-width: 992px) {
+    .slider .pagination {
+      left: 1.5rem; } }
   .slider .pagination .swiper-pagination-bullet {
     width: 4rem;
     height: .5rem;
@@ -1126,16 +1135,50 @@ p {
   grid-template-columns: 50rem 1fr;
   grid-template-rows: auto;
   position: relative; }
+  @media screen and (max-width: 1500px) {
+    .what .what-cont {
+      grid-template-columns: 35rem 1fr; } }
+  @media screen and (max-width: 1366px) {
+    .what .what-cont {
+      grid-template-columns: 25rem 1fr; } }
+  @media screen and (max-width: 768px) {
+    .what .what-cont {
+      grid-template-columns: 15rem 1fr; } }
+  @media screen and (max-width: 500px) {
+    .what .what-cont {
+      grid-template-columns: 10rem 1fr; } }
   .what .what-cont .what__contact {
     display: grid;
     grid-template-columns: 1fr 44rem;
     grid-template-rows: auto; }
+    @media screen and (max-width: 1366px) {
+      .what .what-cont .what__contact {
+        grid-template-columns: 1fr 30rem; } }
+    @media screen and (max-width: 1110px) {
+      .what .what-cont .what__contact {
+        display: block; } }
     .what .what-cont .what__contact--form {
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
       margin: 2rem 0 10rem 0; }
+      @media screen and (max-width: 1110px) {
+        .what .what-cont .what__contact--form {
+          margin: 2rem 0; } }
+      @media screen and (max-width: 700px) {
+        .what .what-cont .what__contact--form .wpcf7 {
+          width: 100%; } }
+      @media screen and (max-width: 700px) {
+        .what .what-cont .what__contact--form .wpcf7 form {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          padding: 0 1rem;
+          margin: 0 1rem; } }
+      @media screen and (max-width: 700px) {
+        .what .what-cont .what__contact--form .wpcf7 form input, .what .what-cont .what__contact--form .wpcf7 form textarea {
+          width: 100%; } }
       .what .what-cont .what__contact--form h3 {
         margin-bottom: 3rem; }
       .what .what-cont .what__contact--form .custom-input {
@@ -1143,6 +1186,9 @@ p {
         .what .what-cont .what__contact--form .custom-input label {
           display: flex;
           align-items: center; }
+          @media screen and (max-width: 700px) {
+            .what .what-cont .what__contact--form .custom-input label {
+              display: block; } }
           .what .what-cont .what__contact--form .custom-input label .label-head {
             width: 8rem;
             text-align: right;
@@ -1158,7 +1204,7 @@ p {
               border-radius: .5rem;
               height: 5.5rem;
               font-size: 1.8rem;
-              padding: 0 .5rem;
+              padding: 0 1.5rem;
               box-sizing: border-box;
               min-width: 100%; }
             .what .what-cont .what__contact--form .custom-input label .wpcf7-form-control-wrap textarea {
@@ -1199,6 +1245,9 @@ p {
       height: fit-content;
       padding: 3rem 0 3rem 3rem;
       position: relative; }
+      @media screen and (max-width: 1110px) {
+        .what .what-cont .what__contact--list {
+          margin: 2rem 0; } }
       .what .what-cont .what__contact--list img {
         position: absolute;
         top: 10%;
@@ -1217,6 +1266,9 @@ p {
         .what .what-cont .what__contact--list .what__contact--list-cont .what__contact--item {
           font-size: 2.1rem;
           margin-bottom: 3rem; }
+          @media screen and (max-width: 500px) {
+            .what .what-cont .what__contact--list .what__contact--list-cont .what__contact--item {
+              font-size: 1.5rem; } }
           .what .what-cont .what__contact--list .what__contact--list-cont .what__contact--item h4 {
             font-weight: 400; }
           .what .what-cont .what__contact--list .what__contact--list-cont .what__contact--item div {
@@ -1236,6 +1288,9 @@ p {
     position: relative;
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 768px) {
+      .what .what-cont .what__left {
+        padding: 0 1rem; } }
     .what .what-cont .what__left img {
       transform: translateX(-5rem);
       padding: 5rem 0; }
@@ -1246,57 +1301,84 @@ p {
       font-weight: 700;
       text-transform: uppercase;
       font-size: 4.8rem; }
+      @media screen and (max-width: 1366px) {
+        .what .what-cont .what__left--title {
+          writing-mode: tb;
+          transform: translateY(-50%); } }
   .what .what-cont .what__right {
     padding: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 0 5rem; }
-    .what .what-cont .what__right .what-box:hover .what-box__black:after {
-      width: 100%; }
-    .what .what-cont .what__right .what-box a {
-      overflow: hidden;
-      display: inline-block;
-      position: relative; }
-      .what .what-cont .what__right .what-box a:hover img {
-        transform: scale(1.1);
-        filter: contrast(120%); }
-      .what .what-cont .what__right .what-box a:hover .what-box-title {
-        position: absolute;
-        top: 40%;
-        left: 1rem;
-        right: 1rem;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.7);
-        color: #131313;
-        padding: 1rem;
-        border: solid 1px #A3A3A3;
-        opacity: 1;
+    @media screen and (max-width: 768px) {
+      .what .what-cont .what__right {
+        padding: 1rem; } }
+    @media screen and (max-width: 920px) {
+      .what .what-cont .what__right {
+        display: block; } }
+    .what .what-cont .what__right .what-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      @media screen and (max-width: 920px) {
+        .what .what-cont .what__right .what-box {
+          margin-bottom: 2rem; } }
+      .what .what-cont .what__right .what-box:hover .what-box__black:after {
+        width: 100%; }
+      .what .what-cont .what__right .what-box a {
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        width: 100%; }
+        .what .what-cont .what__right .what-box a:hover img {
+          transform: scale(1.1);
+          filter: contrast(120%); }
+        .what .what-cont .what__right .what-box a:hover .what-box-title {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          padding: 50% .5rem .5rem .5rem;
+          margin: 0 auto;
+          background-color: rgba(255, 255, 255, 0.7);
+          color: #131313;
+          opacity: 1;
+          font-weight: 700; }
+          .what .what-cont .what__right .what-box a:hover .what-box-title span {
+            background-color: #E69C14;
+            padding: .5rem;
+            display: inline-block;
+            transform: translateY(0); }
+        .what .what-cont .what__right .what-box a span {
+          transition: all .4s;
+          transform: translateY(200px); }
+        .what .what-cont .what__right .what-box a img {
+          transition: all .4s;
+          width: 100%; }
+        .what .what-cont .what__right .what-box a .what-box-title {
+          opacity: 0;
+          transition: background-color .4s;
+          height: 0; }
+      .what .what-cont .what__right .what-box__gray {
+        font-size: 1.8rem;
+        color: #AAAAAA; }
+      .what .what-cont .what__right .what-box__black {
+        font-size: 2.8rem;
         font-weight: 700;
-        border-radius: .5rem; }
-      .what .what-cont .what__right .what-box a img {
-        transition: all .4s; }
-      .what .what-cont .what__right .what-box a .what-box-title {
-        opacity: 0;
-        transition: background-color .4s; }
-    .what .what-cont .what__right .what-box__gray {
-      font-size: 1.8rem;
-      color: #AAAAAA; }
-    .what .what-cont .what__right .what-box__black {
-      font-size: 2.8rem;
-      font-weight: 700;
-      position: relative;
-      line-height: 5.2rem;
-      z-index: 1; }
-      .what .what-cont .what__right .what-box__black:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: .3rem;
-        width: 9rem;
-        background-color: #E69C14;
-        transition: all .4s; }
+        position: relative;
+        line-height: 5.2rem;
+        z-index: 1; }
+        .what .what-cont .what__right .what-box__black:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: .3rem;
+          width: 9rem;
+          background-color: #E69C14;
+          transition: all .4s; }
 
 .about .desaturate {
   width: 100%;
